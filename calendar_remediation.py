@@ -72,6 +72,12 @@ def get_calendar_events(mailbox, access_token, start_date, end_date, sender=None
 
         # Parse and format times
         if start_time_str and end_time_str:
+            # Truncate fractional seconds to 6 digits for Python 3.7+ compatibility
+            if '.' in start_time_str:
+                start_time_str = start_time_str.split('.')[0] + '.' + start_time_str.split('.')[1][:6]
+            if '.' in end_time_str:
+                end_time_str = end_time_str.split('.')[0] + '.' + end_time_str.split('.')[1][:6]
+
             start_time = datetime.fromisoformat(start_time_str)
             end_time = datetime.fromisoformat(end_time_str)
             time_range = f"{start_time.strftime('%I:%M%p').lstrip('0')}-{end_time.strftime('%I:%M%p').lstrip('0')} UTC"
