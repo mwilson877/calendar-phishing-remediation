@@ -122,16 +122,6 @@ Successfully deleted the calendar event!
 - Log all remediation actions for audit purposes
 - Verify the sender/subject before deletion to avoid removing legitimate events
 
-## .gitignore Recommendation
-
-Add to your `.gitignore`:
-```
-config.ini
-*.ini
-__pycache__/
-*.pyc
-```
-
 ## License
 
 MIT License - See LICENSE file for details
