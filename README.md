@@ -42,7 +42,7 @@ While designed for security remediation, this tool can also be used for:
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/calendar-remediation-tool.git
+git clone https://github.com/mwilson877/calendar-remediation-tool.git
 cd calendar-remediation-tool
 ```
 
